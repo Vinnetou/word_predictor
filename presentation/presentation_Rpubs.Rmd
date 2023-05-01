@@ -1,0 +1,44 @@
+---
+title: "Word Predictor"
+author: "Lukas Kloucek"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+
+---
+
+
+# Introduction {.intro}
+
+This is presentation of **Word Predictor** Shiny App which can be found [here](https://lkloucek.shinyapps.io/final_project/)
+
+
+
+# {.slide}
+
+**App preview** below. User input a text, choose how many predictions (one to three) want to see and app does the rest.
+
+<img src="C:/Users/lukie/OneDrive/R_oneDrive/word_predict_resized.png" style="height: 100%; width: 100%;" />
+
+
+# Description {.smaller}
+
+Word Predict is a Shiny app that uses a text predictive algorithm to guess the next word(s) based on text already written by a user.
+
+The application will suggest the next word in a sentence using an n-gram algorithm. An n-gram is a contiguous sequence of n words from a given sequence of text.
+
+The text used to build the predictive text model came from a large corpus of blogs, news and twitter data. N-grams were extracted from the corpus and then used to build the predictive text model.
+
+
+# Predictive Model {.smaller}
+
+The predictive model used in the app was train on the large corpus of english text from multiple sources.
+
+The sample of data (for efficenty) was then tokenized (into n-grams) and cleaned. As part of the cleaning process the data was converted to lowercase, removed all non-ascii characters, URLs, email addresses, Twitter handles, hash tags, ordinal numbers, profane words, punctuation and white space.
+
+When text is typed in by the user, the algorithm iterates from longest n-gram (4-gram) to shortest (2-gram) to detect a best match. The algorithm makes use of a simple back-off strategy.
+
+
+# References {.slide}
+
+- Link to the shiny app: https://lkloucek.shinyapps.io/final_project/
+- Link to code behind the shiny app in github: https://github.com/Vinnetou/word_predictor
